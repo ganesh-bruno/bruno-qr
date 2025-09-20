@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .main-title {
+            color: #FF8C00;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .qr-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .qr-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .section-title {
+            color: #FF8C00;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .qr-image {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .qr-image:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            
+            .container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .qr-section {
+                padding: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .qr-image {
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-title">Bruno Community</h1>
+    
+    <div class="container">
+        <div class="qr-section">
+            <h2 class="section-title">Join Bruno Discord</h2>
+            <img src="images/https___discord.gg_fAPz4PrYnK.png" alt="Bruno Discord QR Code" class="qr-image">
+            <p class="description">Scan to join our Discord community</p>
+        </div>
+        
+        <div class="qr-section">
+            <h2 class="section-title">Bruno Repository</h2>
+            <img src="images/Bruno Repository.png" alt="Bruno Repository QR Code" class="qr-image">
+            <p class="description">Scan to access the Bruno repository</p>
+        </div>
+    </div>
+</body>
+</html>
